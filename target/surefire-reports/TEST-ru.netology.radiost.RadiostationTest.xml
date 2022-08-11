@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.radiost.RadiostationTest" time="0.057" tests="18" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ru.netology.radiost.RadiostationTest" time="0.061" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.15.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\D899~1\AppData\Local\Temp\surefire14835436655104762215\surefirebooter18211524533563794432.jar C:\Users\Сергей\AppData\Local\Temp\surefire14835436655104762215 2022-08-11T11-41-28_716-jvmRun1 surefire8897570735387813855tmp surefire_010568262667089693372tmp"/>
+    <property name="sun.java.command" value="C:\Users\D899~1\AppData\Local\Temp\surefire2333520519043842452\surefirebooter3256463675379013354.jar C:\Users\Сергей\AppData\Local\Temp\surefire2333520519043842452 2022-08-11T12-38-52_634-jvmRun1 surefire1476133135110152146tmp surefire_012727097967820529876tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\radiost\target\test-classes;C:\radiost\target\classes;C:\Users\Сергей\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\Сергей\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\Сергей\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Сергей\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Сергей\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\Сергей\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\Сергей\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\Сергей\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\D899~1\AppData\Local\Temp\surefire14835436655104762215\surefirebooter18211524533563794432.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\D899~1\AppData\Local\Temp\surefire2333520519043842452\surefirebooter3256463675379013354.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.15+10"/>
@@ -61,22 +61,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="volumeMax" classname="ru.netology.radiost.RadiostationTest" time="0.033"/>
+  <testcase name="volumeMax" classname="ru.netology.radiost.RadiostationTest" time="0.035"/>
   <testcase name="stationOfLowerBorder" classname="ru.netology.radiost.RadiostationTest" time="0"/>
   <testcase name="buttonPrevFromZero" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="ifCurrentStationLessThanZero" classname="ru.netology.radiost.RadiostationTest" time="0"/>
+  <testcase name="ifCurrentStationLessThanZero" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
   <testcase name="stationBelowMax" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="volumeBelowMax" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="ifCurrentVolumeLessThanZero" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="shouldSetStation" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
-  <testcase name="stationOfMaxBorder" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
+  <testcase name="volumeBelowMax" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
+  <testcase name="ifCurrentVolumeLessThanZero" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
+  <testcase name="shouldSetStation" classname="ru.netology.radiost.RadiostationTest" time="0"/>
+  <testcase name="stationOfMaxBorder" classname="ru.netology.radiost.RadiostationTest" time="0"/>
   <testcase name="stationMax" classname="ru.netology.radiost.RadiostationTest" time="0"/>
   <testcase name="ifCurrentVolumeMoreThanTen" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="buttonPrevVolumeFromLowerBorder" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
+  <testcase name="buttonPrevVolumeFromLowerBorder" classname="ru.netology.radiost.RadiostationTest" time="0"/>
   <testcase name="volumeUpToMax" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
-  <testcase name="buttonPrevVolumeFromUpperBorder" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="buttonPrevStation" classname="ru.netology.radiost.RadiostationTest" time="0.002"/>
+  <testcase name="buttonPrevVolumeFromUpperBorder" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
+  <testcase name="buttonPrevStation" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
   <testcase name="ifCurrentStationMoreThanNine" classname="ru.netology.radiost.RadiostationTest" time="0"/>
-  <testcase name="buttonPrevVolumeFromZero" classname="ru.netology.radiost.RadiostationTest" time="0"/>
+  <testcase name="buttonPrevVolumeFromZero" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
   <testcase name="buttonPrevVolume" classname="ru.netology.radiost.RadiostationTest" time="0.001"/>
 </testsuite>

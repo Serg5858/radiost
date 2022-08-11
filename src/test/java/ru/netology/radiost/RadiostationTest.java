@@ -1,4 +1,5 @@
 package ru.netology.radiost;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +32,7 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void ifCurrentStationLessThanZero() {
         Radiostation radiostation = new Radiostation();
@@ -40,6 +42,7 @@ public class RadiostationTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void ifCurrentStationMoreThanNine() {
         Radiostation radiostation = new Radiostation();
@@ -49,6 +52,7 @@ public class RadiostationTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void buttonPrevStation() {
         Radiostation radiostation = new Radiostation();
@@ -58,6 +62,7 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void buttonPrevFromZero() {
         Radiostation radiostation = new Radiostation();
@@ -77,14 +82,16 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void stationMax () {
+    public void stationMax() {
         Radiostation radiostation = new Radiostation();
         radiostation.setToMaxStation();
         int expected = 9;
         int actual = radiostation.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void ifCurrentVolumeLessThanZero() {
         Radiostation radiostation = new Radiostation();
@@ -94,6 +101,7 @@ public class RadiostationTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void ifCurrentVolumeMoreThanTen() {
         Radiostation radiostation = new Radiostation();
@@ -105,13 +113,14 @@ public class RadiostationTest {
     }
 
     @Test
-    public void volumeMax () {
+    public void volumeMax() {
         Radiostation radiostation = new Radiostation();
         radiostation.setToMaxVolume();
         int expected = 10;
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void volumeBelowMax() {
         Radiostation radiostation = new Radiostation();
@@ -121,6 +130,7 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void volumeUpToMax() {
         Radiostation radiostation = new Radiostation();
@@ -132,7 +142,6 @@ public class RadiostationTest {
     }
 
 
-
     @Test
     public void buttonPrevVolume() {
         Radiostation radiostation = new Radiostation();
@@ -142,6 +151,7 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void buttonPrevVolumeFromZero() {
         Radiostation radiostation = new Radiostation();
@@ -151,6 +161,7 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void buttonPrevVolumeFromLowerBorder() {
         Radiostation radiostation = new Radiostation();
@@ -160,6 +171,7 @@ public class RadiostationTest {
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void buttonPrevVolumeFromUpperBorder() {
         Radiostation radiostation = new Radiostation();
