@@ -1,81 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Radiostation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">radiost</a> &gt; <a href="index.source.html" class="el_package">ru.netology.radiost</a> &gt; <span class="el_source">Radiostation.java</span></div><h1>Radiostation.java</h1><pre class="source lang-java linenums">package ru.netology.radiost;
 
-<span class="fc" id="L3">public class Radiostation {</span>
-    public int currentStation;
-    public int currentVolume;
+public class Radiostation {
+<span class="pc" id="L4">    private int minRadioStation = 0;</span>
+<span class="pc" id="L5">    private int maxRadioStation = 9;</span>
+<span class="pc" id="L6">    private int minVolume = 0;</span>
+<span class="pc" id="L7">    private int maxVolume = 100;</span>
+<span class="pc" id="L8">    private int currentStation = minRadioStation;</span>
+<span class="pc" id="L9">    private int currentVolume = minVolume;</span>
+    private int stationAmount;
+
+<span class="fc" id="L12">    public Radiostation() {</span>
+<span class="fc" id="L13">        stationAmount = 10;</span>
+<span class="fc" id="L14">    }</span>
+
+<span class="nc" id="L16">    public Radiostation(int stationAmount) {</span>
+<span class="nc" id="L17">        this.stationAmount = stationAmount;</span>
+<span class="nc" id="L18">    }</span>
 
     public int getCurrentStation() {
-<span class="fc" id="L8">        return currentStation;</span>
+<span class="fc" id="L21">        return currentStation;</span>
     }
 
     public int getCurrentVolume() {
-<span class="fc" id="L12">        return currentVolume;</span>
+<span class="fc" id="L25">        return currentVolume;</span>
+    }
+
+    public int getMinRadioStation() {
+<span class="fc" id="L29">        return minRadioStation;</span>
+    }
+
+    public int getMaxRadioStation() {
+<span class="fc" id="L33">        return maxRadioStation;</span>
+    }
+
+    public int getMinVolume() {
+<span class="fc" id="L37">        return minVolume;</span>
+    }
+
+    public int getMaxVolume() {
+<span class="fc" id="L41">        return maxVolume;</span>
     }
 
     public void setCurrentStation(int newCurrentStation) {
-<span class="fc bfc" id="L16" title="All 2 branches covered.">        if (newCurrentStation &lt; 0) {</span>
-<span class="fc" id="L17">            return;</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        if (newCurrentStation &lt; minRadioStation) {</span>
+<span class="fc" id="L46">            return;</span>
         }
-<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (newCurrentStation &gt; 9) {</span>
-<span class="fc" id="L20">            return;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (newCurrentStation &gt; stationAmount - 1) {</span>
+<span class="fc" id="L49">            return;</span>
         }
-<span class="fc" id="L22">        currentStation = newCurrentStation;</span>
-<span class="fc" id="L23">    }</span>
+<span class="fc" id="L51">        currentStation = newCurrentStation;</span>
+<span class="fc" id="L52">    }</span>
 
     public void setCurrentVolume(int newCurrentVolume) {
-<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (newCurrentVolume &lt; 0) {</span>
-<span class="fc" id="L27">            return;</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (newCurrentVolume &lt; minVolume) {</span>
+<span class="fc" id="L56">            return;</span>
         }
-<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (newCurrentVolume &gt; 10) {</span>
-<span class="fc" id="L30">            return;</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (newCurrentVolume &gt; maxVolume) {</span>
+<span class="fc" id="L59">            return;</span>
         }
-<span class="fc" id="L32">        currentVolume = newCurrentVolume;</span>
-<span class="fc" id="L33">    }</span>
+<span class="fc" id="L61">        currentVolume = newCurrentVolume;</span>
+<span class="fc" id="L62">    }</span>
 
     public void setToMaxStation() {
-<span class="fc" id="L36">        currentStation = 9;</span>
-<span class="fc" id="L37">    }</span>
+<span class="fc" id="L65">        currentStation = 9;</span>
+<span class="fc" id="L66">    }</span>
 
     public void setToMaxVolume() {
-<span class="fc" id="L40">        currentVolume = 10;</span>
-<span class="fc" id="L41">    }</span>
+<span class="fc" id="L69">        currentVolume = 10;</span>
+<span class="fc" id="L70">    }</span>
 
     public void increaseStation() {
-<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (currentStation &lt; 9) {</span>
-<span class="fc" id="L45">            currentStation = currentStation + 1;</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (currentStation &lt; stationAmount - 1) {</span>
+<span class="fc" id="L74">            currentStation = currentStation + 1;</span>
+        } else {
+<span class="fc" id="L76">            currentStation = minRadioStation;</span>
         }
-<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (currentStation == 9) {</span>
-<span class="fc" id="L48">            currentStation = 0;</span>
-        }
-<span class="fc" id="L50">    }</span>
+<span class="fc" id="L78">    }</span>
 
 
     public void increaseVolume() {
-<span class="fc bfc" id="L54" title="All 2 branches covered.">        if (currentVolume &lt; 10) {</span>
-<span class="fc" id="L55">            currentVolume = currentVolume + 1;</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        if (currentVolume &lt; maxVolume) {</span>
+<span class="fc" id="L83">            currentVolume++;</span>
         }
-<span class="fc bfc" id="L57" title="All 2 branches covered.">        if (currentVolume == 10) {</span>
-<span class="fc" id="L58">            currentVolume = 10;</span>
-        }
-<span class="fc" id="L60">    }</span>
+
+<span class="fc" id="L86">    }</span>
 
 
     public void prevStation() {
-<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (currentStation == 0) {</span>
-<span class="fc" id="L65">            currentStation = 9;</span>
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        if (currentStation == minRadioStation) {</span>
+<span class="fc" id="L91">            currentStation = stationAmount - 1;</span>
         } else {
-<span class="fc" id="L67">            currentStation = currentStation - 1;</span>
+<span class="fc" id="L93">            currentStation--;</span>
 
         }
-<span class="fc" id="L70">    }</span>
+<span class="fc" id="L96">    }</span>
 
 
     public void belowVolumeToMax() {
-<span class="fc bfc" id="L74" title="All 2 branches covered.">        if (currentVolume &lt;= 0) {</span>
-<span class="fc" id="L75">            currentVolume = 0;</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">        if (currentVolume &lt;= minVolume) {</span>
+<span class="fc" id="L101">            currentVolume = 0;</span>
         } else {
-<span class="fc" id="L77">            currentVolume = currentVolume - 1;</span>
+<span class="fc" id="L103">            currentVolume = currentVolume - 1;</span>
         }
-<span class="fc" id="L79">    }</span>
+<span class="fc" id="L105">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
