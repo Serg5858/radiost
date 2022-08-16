@@ -7,13 +7,74 @@ public class RadiostationTest {
     @Test
     public void shouldSetStation() {
         Radiostation radiostation = new Radiostation();
-        radiostation.currentStation = 5;
+        radiostation.setCurrentStation(5);
         int expected = 5;
         int actual = radiostation.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void shouldSetToMaxVolume() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.getMaxVolume();
+        int expected = 100;
+        int actual = radiostation.getMaxVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldSetToMinVolume() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.getMinVolume();
+        int expected = 0;
+        int actual = radiostation.getMinVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldSetToMaxRadiostation() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.getMaxRadioStation();
+        int expected = 9;
+        int actual = radiostation.getMaxRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldSetToMinRadiostation() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.getMinRadioStation();
+        int expected = 0;
+        int actual = radiostation.getMinRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldNotSetVolumeAboveMax() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.setCurrentVolume(101);
+        int expected = 0;
+        int actual = radiostation.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
+    public void shouldIncreaseVolumeOnOne() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.setCurrentVolume(99);
+        radiostation.increaseVolume();
+        int expected = 100;
+        int actual = radiostation.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldDecreaseVolumeOnOne() {
+        Radiostation radiostation = new Radiostation();
+        radiostation.setCurrentVolume(100);
+        radiostation.belowVolumeToMax();
+        int expected = 99;
+        int actual = radiostation.getCurrentVolume();
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+
+        @Test
     public void stationOfMaxBorder() {
         Radiostation radiostation = new Radiostation();
         radiostation.setCurrentStation(9);
@@ -106,7 +167,7 @@ public class RadiostationTest {
     public void ifCurrentVolumeMoreThanTen() {
         Radiostation radiostation = new Radiostation();
         radiostation.setCurrentVolume(12);
-        int expected = 0;
+        int expected = 12;
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
 
@@ -124,22 +185,14 @@ public class RadiostationTest {
     @Test
     public void volumeBelowMax() {
         Radiostation radiostation = new Radiostation();
-        radiostation.setCurrentVolume(2);
+        radiostation.setCurrentVolume(100);
         radiostation.increaseVolume();
-        int expected = 3;
+        int expected = 100;
         int actual = radiostation.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void volumeUpToMax() {
-        Radiostation radiostation = new Radiostation();
-        radiostation.setCurrentVolume(10);
-        radiostation.increaseVolume();
-        int expected = 10;
-        int actual = radiostation.getCurrentVolume();
-        Assertions.assertEquals(expected, actual);
-    }
+
 
 
     @Test
