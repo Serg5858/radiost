@@ -1,8 +1,8 @@
 package ru.netology.radiost;
 
 public class Radiostation {
-    public int currentStation;
-    public int currentVolume;
+    private int currentStation;
+    private int currentVolume;
 
     public int getCurrentStation() {
         return currentStation;
@@ -41,21 +41,18 @@ public class Radiostation {
     }
 
     public void increaseStation() {
-        if (currentStation < 9) {
-            currentStation = currentStation + 1;
-        }
-        if (currentStation == 9) {
+        if (currentStation ==9) {
             currentStation = 0;
+        }
+        else {currentStation++;
         }
     }
 
 
     public void increaseVolume() {
         if (currentVolume < 10) {
-            currentVolume = currentVolume + 1;
-        }
-        if (currentVolume == 10) {
-            currentVolume = 10;
+            currentVolume++;
+
         }
     }
 
